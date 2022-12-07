@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Main-Class: com.logistic.ramalogistic.HelloApplication
+Class-Path: protobuf-java-3.19.4.jar javafx-base-19.jar jfreechart-1.0.1
+ 9.jar commons-beanutils-1.9.4.jar javafx-controls-18-win.jar javafx-gra
+ phics-19-win.jar itext-2.1.7.js10.jar commons-logging-1.1.1.jar jackson
+ -core-2.13.3.jar commons-digester-2.1.jar commons-collections4-4.2.jar 
+ jasperreports-6.20.0.jar bcutil-jdk15on-1.70.jar vincofw-jasperfont-ari
+ al-3.0.0.jar mysql-connector-java-8.0.30.jar bcprov-jdk15on-1.70.jar ja
+ ckson-databind-2.13.3.jar woodstox-core-6.2.7.jar ecj-3.21.0.jar javafx
+ -fxml-18.jar javafx-fxml-18-win.jar stax2-api-4.2.1.jar jackson-datafor
+ mat-xml-2.13.3.jar javafx-controls-18.jar jackson-annotations-2.13.3.ja
+ r commons-collections-3.2.2.jar javafx-graphics-19.jar jcommon-1.0.23.j
+ ar javafx-base-19-win.jar
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.stage.Stage?>
+
+<Stage resizable="false" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.logistic.ramalogistic.HelloApplication">
+   <scene>
+      <Scene>
+         <root>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="311.0" prefWidth="496.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Line endX="16.29290771484375" endY="297.0" layoutX="39.0" layoutY="14.0" startX="16.292892456054688" startY="-14.0" stroke="#0d86ff" strokeWidth="4.0" />
+                  <Line endX="327.0000305175781" endY="253.75735473632812" layoutX="169.0" layoutY="8.0" startX="-169.0" startY="253.75735473632812" stroke="#0d86ff" strokeWidth="4.0" />
+                  <Label alignment="CENTER" graphicTextGap="6.0" layoutX="102.0" layoutY="64.0" prefHeight="87.0" prefWidth="329.0" text="RamaLogistic" textAlignment="CENTER" underline="true">
+                     <font>
+                        <Font name="Wingdings" size="56.0" />
+                     </font>
+                     <effect>
+                        <Lighting diffuseConstant="2.0" specularConstant="2.0" surfaceScale="0.0">
+                           <bumpInput>
+                              <Bloom>
+                                 <input>
+                                    <GaussianBlur />
+                                 </input>
+                              </Bloom>
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.0833333358168602" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label layoutX="106.0" layoutY="142.0" prefHeight="45.0" prefWidth="128.0" text="Version 1.1" textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="percentage" layoutX="372.0" layoutY="229.0" prefHeight="31.0" prefWidth="117.0" text="100.0" textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="297.0" layoutY="273.0" prefHeight="31.0" prefWidth="193.0" text="\@Rama Logistics .LTD 2022 " textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </root>
+      </Scene>
+   </scene>
+</Stage>

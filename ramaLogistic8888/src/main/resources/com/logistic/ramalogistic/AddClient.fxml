@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.stage.Stage?>
+
+<Stage title="Add Client" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.logistic.Client.AddClientController">
+   <scene>
+      <Scene>
+         <root>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="344.0">
+               <children>
+                  <Label layoutX="44.0" layoutY="34.0" prefHeight="35.0" prefWidth="35.0" text="ID :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="id" layoutX="114.0" layoutY="39.0" prefHeight="32.0" prefWidth="213.0" />
+                  <Label layoutX="44.0" layoutY="83.0" prefHeight="35.0" prefWidth="60.0" text="Name:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="name" layoutX="113.0" layoutY="86.0" prefHeight="30.0" prefWidth="214.0" />
+                  <Label layoutX="34.0" layoutY="186.0" prefHeight="35.0" prefWidth="81.0" text="Address:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="address" layoutX="111.0" layoutY="190.0" prefHeight="30.0" prefWidth="214.0" />
+                  <Label layoutX="43.0" layoutY="138.0" prefHeight="35.0" prefWidth="60.0" text="Phone:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="phone" layoutX="113.0" layoutY="141.0" prefHeight="30.0" prefWidth="216.0" />
+                  <Label layoutX="39.0" layoutY="239.0" prefHeight="35.0" prefWidth="81.0" text="Telefx:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="telefx" layoutX="108.0" layoutY="242.0" prefHeight="30.0" prefWidth="218.0" />
+                  <Button fx:id="idImage" layoutX="124.0" layoutY="348.0" mnemonicParsing="false" onAction="#IDImageOnAction" prefHeight="28.0" prefWidth="115.0" text="Click Here" />
+                  <Label layoutX="42.0" layoutY="345.0" prefHeight="31.0" prefWidth="87.0" text="File">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="FileName" layoutX="246.0" layoutY="352.0" prefHeight="24.0" prefWidth="96.0" text="File Name" textFill="#008000" />
+                  <Label layoutX="43.0" layoutY="293.0" prefHeight="35.0" prefWidth="81.0" text="Email">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="email" layoutX="108.0" layoutY="296.0" prefHeight="30.0" prefWidth="220.0" />
+                  <Button fx:id="Save" layoutX="103.0" layoutY="420.0" mnemonicParsing="false" onAction="#SaveOnAction" prefHeight="35.0" prefWidth="171.0" text="Add" />
+               </children>
+            </AnchorPane>
+         </root>
+      </Scene>
+   </scene>
+</Stage>

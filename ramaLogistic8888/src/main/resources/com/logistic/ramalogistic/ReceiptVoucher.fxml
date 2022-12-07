@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.stage.Stage?>
+
+
+<Stage title="Receipt Voucher" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.logistic.ReceiptVoucher.ReceiptVoucherController">
+   <scene>
+      <Scene>
+         <root>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="870.0">
+               <children>
+                  <Label fx:id="NO" layoutX="25.0" layoutY="25.0" prefHeight="35.0" prefWidth="183.0" text="NO .01" textFill="RED">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="76.0" prefHeight="29.0" prefWidth="132.0" text="Received From:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="clientName" layoutX="161.0" layoutY="78.0" onAction="#clientOnAction" prefWidth="150.0" />
+                  <Label layoutX="341.0" layoutY="76.0" prefHeight="29.0" prefWidth="23.0" text="ID " />
+                  <Label fx:id="ClientId" layoutX="361.0" layoutY="76.0" prefHeight="29.0" prefWidth="130.0" text="xxxxxxxxxxxx" />
+                  <Label layoutX="20.0" layoutY="130.0" prefHeight="29.0" prefWidth="123.0" text="The sum OF">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="sumOf" layoutX="162.0" layoutY="132.0" prefHeight="25.0" prefWidth="417.0" text=" " />
+                  <Label layoutX="20.0" layoutY="172.0" prefHeight="29.0" prefWidth="140.0" text="On Account Of :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="accountOf" layoutX="161.0" layoutY="177.0" prefHeight="25.0" prefWidth="415.0" text=" " />
+                  <AnchorPane layoutX="650.0" layoutY="59.0" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: #9E69B9;">
+                     <children>
+                        <RadioButton fx:id="nis" layoutX="33.0" layoutY="21.0" mnemonicParsing="false" text="NIS" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="dollar" layoutX="101.0" layoutY="21.0" mnemonicParsing="false" text="Dollar" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="cash" layoutX="33.0" layoutY="77.0" mnemonicParsing="false" text="cash" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="cheque" layoutX="101.0" layoutY="77.0" mnemonicParsing="false" text="cheque" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </AnchorPane>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="234.0" prefHeight="35.0" prefWidth="150.0" text="Total Amount" underline="true">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="190.0" layoutY="235.0" prefHeight="35.0" prefWidth="150.0" text="Due Date" underline="true">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="352.0" layoutY="235.0" prefHeight="35.0" prefWidth="150.0" text="Bank" underline="true">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="530.0" layoutY="235.0" prefHeight="35.0" prefWidth="150.0" text="Cheque NO." underline="true">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="30.0" layoutY="270.0" prefHeight="174.0" prefWidth="150.0" spacing="20.0">
+                     <children>
+                        <TextField fx:id="total" text=" " />
+                        <TextField fx:id="total1" text=" " />
+                        <TextField fx:id="total2" text=" " />
+                        <TextField fx:id="total3" text=" " />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="188.0" layoutY="270.0" prefHeight="174.0" prefWidth="150.0" spacing="20.0">
+                     <children>
+                        <TextField fx:id="dueDate" text=" ">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dueDate1" text=" " />
+                        <TextField fx:id="dueDate2" text=" " />
+                        <TextField fx:id="dueDate3" text=" " />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="360.0" layoutY="270.0" prefHeight="174.0" prefWidth="150.0" spacing="20.0">
+                     <children>
+                        <TextField fx:id="bank" text=" " />
+                        <TextField fx:id="bank1" text=" " />
+                        <TextField fx:id="bank2" text=" " />
+                        <TextField fx:id="bank3" text=" " />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="531.0" layoutY="270.0" prefHeight="174.0" prefWidth="150.0" spacing="20.0">
+                     <children>
+                        <TextField fx:id="cheque0" text=" " />
+                        <TextField fx:id="cheque1" text=" " />
+                        <TextField fx:id="cheque2" text=" " />
+                        <TextField fx:id="cheque3" text=" " />
+                     </children>
+                  </VBox>
+                  <DatePicker fx:id="dateNow" layoutX="360.0" layoutY="30.0" promptText="Select Date" />
+                  <ImageView fitHeight="63.0" fitWidth="75.0" layoutX="30.0" layoutY="490.0" onMouseClicked="#saveOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/icons8-save-64.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="63.0" fitWidth="56.0" layoutX="156.0" layoutY="490.0" onMouseClicked="#printOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/printing.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </root>
+      </Scene>
+   </scene>
+</Stage>

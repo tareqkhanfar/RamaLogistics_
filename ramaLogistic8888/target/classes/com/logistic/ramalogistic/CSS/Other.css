@@ -1,0 +1,18 @@
+.text-field {
+    -fx-border-color: black;
+    -fx-border : 0 0 1 0; // top, right, bottom, left
+-fx-background-color: white;
+    -fx-font-size: 15px;
+}
+.button{
+    -fx-border-radius: 30px;
+    -fx-font-size: 20px;
+}
+.button:hover{
+    -fx-background-color: #a49f9f;
+    -fx-scale-y: 1.1;
+}
+.label{
+    -fx-font-size: 18px;
+
+}

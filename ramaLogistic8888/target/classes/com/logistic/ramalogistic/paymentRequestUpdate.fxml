@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.stage.Stage?>
+
+<Stage title="Payment Request" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.logistic.PaymentRequest.PaymentRequestUpdateController">
+   <scene>
+      <Scene>
+         <root>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="1409.0" spacing="10.0">
+               <children>
+                  <Label fx:id="l1" prefHeight="43.0" prefWidth="1404.0" text="PAYMENT Request" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" />
+                  <AnchorPane prefHeight="54.0" prefWidth="1399.0">
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="49.0" layoutX="83.0" layoutY="-2.0" onMouseClicked="#printOnAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/printer.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="39.0" layoutX="148.0" layoutY="-1.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/remove.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="564.0" layoutY="-10.0" prefHeight="39.0" prefWidth="171.0" text="PaymentNO:" textFill="RED">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="NO" layoutX="719.0" layoutY="-9.0" prefHeight="36.0" prefWidth="73.0" text="0" textFill="RED">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="save" fitHeight="57.0" fitWidth="52.0" layoutX="8.0" layoutY="-11.0" onMouseClicked="#saveOnAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-save-64.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="791.0" layoutY="-8.0" prefHeight="39.0" prefWidth="107.0" text="File NO:" textFill="#4912dd">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fileNo" layoutX="897.0" layoutY="-9.0" prefHeight="39.0" prefWidth="221.0" text="0" textFill="#4912dd">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink fx:id="sendMessage" layoutX="1159.0" layoutY="7.0" onAction="#sendMessageOnAction" prefHeight="23.0" prefWidth="89.0" text="Send Message" />
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="1248.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/email.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <HBox prefHeight="55.0" prefWidth="1379.0" spacing="5.0">
+                     <children>
+                        <Label text="TO">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="SelectClient" onAction="#selectOnAction" prefHeight="25.0" prefWidth="144.0" promptText="Select " />
+                        <Label text="ID">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="idLabel" prefHeight="27.0" prefWidth="144.0" text="xxxxxxxxxxxx" textFill="RED">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="33.0" prefWidth="131.0" text="             Date :">
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Label>
+                        <DatePicker fx:id="dateNow">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </DatePicker>
+                        <Label prefHeight="31.0" prefWidth="149.0" text="                     File Number" textAlignment="RIGHT" />
+                        <ComboBox fx:id="fileNumber" onAction="#fileNumberOnAction" prefWidth="150.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="61.0" prefWidth="1381.0" spacing="10.0">
+                     <children>
+                        <Label text="   Supplier Name">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="selectSupplier" onAction="#selectSupplierOnAction" prefHeight="25.0" prefWidth="144.0" promptText="Select " />
+                        <Label text="ID">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="idSupllier" prefHeight="27.0" prefWidth="144.0" text="xxxxxxxxxxxx" textFill="RED">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="l2" alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="1398.0" text="Shipment Details" textAlignment="JUSTIFY" textFill="RED" textOverrun="WORD_ELLIPSIS" />
+                  <HBox prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="91.0" text="Transport type">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="transportType" prefHeight="28.0" prefWidth="157.0" />
+                        <Label prefHeight="40.0" prefWidth="74.0" text="Carrier">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="carrier" prefHeight="28.0" prefWidth="157.0" />
+                        <Label prefHeight="40.0" prefWidth="75.0" text="MBL">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="MBL" prefHeight="28.0" prefWidth="169.0" />
+                        <Label prefHeight="40.0" prefWidth="93.0" text="HBL">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="HBL" prefHeight="28.0" prefWidth="164.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="91.0" text="Dep. Date">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="depDate" prefHeight="25.0" prefWidth="160.0" />
+                        <Label prefHeight="40.0" prefWidth="94.0" text="Arr. Date">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="arrDate" prefHeight="25.0" prefWidth="160.0" />
+                        <Label prefHeight="40.0" prefWidth="69.0" text="Disch. Port">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dischPort" prefHeight="28.0" prefWidth="162.0" />
+                        <Label prefHeight="40.0" prefWidth="71.0" text="Load Port">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="loadPort" prefHeight="28.0" prefWidth="171.0" />
+                        <Label prefHeight="40.0" prefWidth="91.0" text="Manifest No.">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="manifestNo" prefHeight="28.0" prefWidth="132.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="l3" alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="1402.0" text="Consignment Details" textAlignment="JUSTIFY" textFill="RED" textOverrun="WORD_ELLIPSIS" />
+                  <HBox prefHeight="56.0" prefWidth="1123.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="49.0" prefWidth="101.0" text="Desc. Of Goods">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="descGoods" prefHeight="28.0" prefWidth="213.0" />
+                        <Label prefHeight="38.0" prefWidth="86.0" text="Incoterms">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="incoterms" prefHeight="28.0" prefWidth="157.0" />
+                        <Label prefHeight="40.0" prefWidth="91.0" text="Package Type">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="packageType" prefHeight="28.0" prefWidth="157.0" />
+                        <Label prefHeight="40.0" prefWidth="56.0" text="Pcs.">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pcs" prefHeight="28.0" prefWidth="157.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="91.0" text="Weight">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="weight" prefHeight="28.0" prefWidth="157.0" />
+                        <Label prefHeight="40.0" prefWidth="91.0" text="Ch. Weight">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="chWeight" prefHeight="28.0" prefWidth="157.0" />
+                        <Label prefHeight="40.0" prefWidth="91.0" text="Volume">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="volume" prefHeight="28.0" prefWidth="157.0" />
+                        <Label prefHeight="40.0" prefWidth="91.0" text="Goods Value">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="goodsValue" prefHeight="28.0" prefWidth="157.0" />
+                        <Label prefHeight="40.0" prefWidth="91.0" text="Currency">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="currency" prefHeight="28.0" prefWidth="157.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Button fx:id="paymentDetails" mnemonicParsing="false" onAction="#paymentDetailsOnAction" prefHeight="65.0" prefWidth="1401.0" text="Payment Details - Click Here" />
+                  <AnchorPane prefHeight="56.0" prefWidth="1399.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="6.0" prefHeight="41.0" prefWidth="150.0" text="Value of Goods for Tax:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tax" layoutX="164.0" layoutY="11.0" prefHeight="39.0" prefWidth="124.0" />
+                        <Label layoutX="404.0" layoutY="17.0" prefHeight="18.0" prefWidth="117.0" text="Currency Ammount" />
+                        <TextField fx:id="currencyAmount" layoutX="527.0" layoutY="13.0" prefHeight="25.0" prefWidth="53.0" text="NIS" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </VBox>
+         </root>
+      </Scene>
+   </scene>
+</Stage>

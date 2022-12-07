@@ -1,0 +1,42 @@
+.text-field {
+    -fx-border-color: black;
+    -fx-border : 0 0 1 0; // top, right, bottom, left
+-fx-background-color: white;
+    -fx-font-size: 15px;
+}
+.button{
+    -fx-border-radius: 30px;
+    -fx-font-size: 20px;
+}
+.button:hover{
+    -fx-background-color: #a49f9f;
+    -fx-scale-y: 1.1;
+}
+#exit{
+    -fx-background-color: #b43737;
+    -fx-text-fill: white;
+}
+
+
+#save{
+    -fx-background-color: #6a61f8;
+    -fx-text-fill: white;
+}
+#l1{
+    -fx-font-size: 20px;
+    -fx-background-color: #77e7b4;
+}
+#l2{
+    -fx-font-size: 20px;
+    -fx-background-color: #77e7b4;
+
+}
+#l3{
+    -fx-font-size: 20px;
+    -fx-background-color: #77e7b4;
+
+}
+.total {
+    -fx-text-fill:green ;
+}
+

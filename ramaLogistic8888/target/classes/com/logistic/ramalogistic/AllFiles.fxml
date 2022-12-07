@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.stage.Stage?>
+
+<Stage xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.logistic.FileTracker.AllFilesController">
+   <scene>
+      <Scene>
+         <root>
+            <AnchorPane prefHeight="575.0" prefWidth="1408.0">
+               <children>
+                  <TableView fx:id="tableFilesOne" layoutY="96.0" prefHeight="475.0" prefWidth="1408.0">
+                     <columns>
+                        <TableColumn fx:id="FileNumberC" prefWidth="160.0" text="file number" />
+                        <TableColumn fx:id="ClientNameC" prefWidth="163.0" text="client name" />
+                        <TableColumn fx:id="openDateC" prefWidth="149.0" text="open date" />
+                        <TableColumn fx:id="ArivalDateC" prefWidth="176.0" text="Arival Date" />
+                        <TableColumn fx:id="ReleaseDate" prefWidth="214.0" text="Release Date" />
+                        <TableColumn fx:id="transferDate" prefWidth="202.0" text="Transfer Date" />
+                        <TableColumn fx:id="fileAmountC" prefWidth="192.0" text="FILE AMOUNT " />
+                        <TableColumn fx:id="sellingvalueC" prefWidth="190.0" text="selling value " />
+                        <TableColumn fx:id="TransferAmountC" prefWidth="197.0" text="Transfer Amount" />
+                        <TableColumn fx:id="BalanceC" prefWidth="221.0" text="Balance" />
+                     </columns>
+                  </TableView>
+                  <HBox layoutX="460.0" layoutY="37.0" prefHeight="46.0" prefWidth="656.0" spacing="20.0">
+                     <children>
+                        <RadioButton fx:id="shippingDocumentRadio" mnemonicParsing="false" onAction="#shippingOnAction" text="SHIPPING DOCUMENTS">
+                           <font>
+                              <Font size="16.0" />
+                           </font></RadioButton>
+                        <RadioButton fx:id="clernceRadio" mnemonicParsing="false" onAction="#invoiceInAction" text="CLERNCE INVOICE ">
+                           <font>
+                              <Font size="16.0" />
+                           </font></RadioButton>
+                        <RadioButton fx:id="status" mnemonicParsing="false" onAction="#statusOnAction" text="Status">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="45.0" fitWidth="41.0" layoutX="81.0" layoutY="8.0" onMouseClicked="#deleteOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/remove.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="41.0" layoutX="147.0" layoutY="9.0" onMouseClicked="#updateOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/refresh.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="41.0" layoutX="14.0" layoutY="10.0" onMouseClicked="#addOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/icons8-add-32.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="refresh" layoutX="247.0" layoutY="11.0" mnemonicParsing="false" onAction="#refreshOnAction" prefHeight="37.0" prefWidth="96.0" text="Refresh" />
+                  <Label alignment="CENTER" layoutX="1116.0" layoutY="-1.0" prefHeight="50.0" prefWidth="291.0" style="-fx-background-color: #360b72;" text="ALL FILES" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </root>
+      </Scene>
+   </scene>
+</Stage>

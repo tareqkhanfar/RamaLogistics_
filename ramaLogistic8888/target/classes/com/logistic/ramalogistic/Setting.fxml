@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.stage.Stage?>
+
+<Stage xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.logistic.Setting.SettingController">
+   <scene>
+      <Scene>
+         <root>
+            <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="567.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab text="INFO">
+                     <content>
+                        <AnchorPane prefHeight="370.0" prefWidth="566.0">
+                           <children>
+                              <Label layoutX="103.0" layoutY="20.0" prefHeight="30.0" prefWidth="141.0" text="Name" />
+                              <TextField fx:id="name" layoutX="226.0" layoutY="23.0" promptText="Name of Company" />
+                              <Label layoutX="103.0" layoutY="64.0" prefHeight="30.0" prefWidth="111.0" text="Email" />
+                              <TextField fx:id="email" layoutX="225.0" layoutY="67.0" />
+                              <Label layoutX="103.0" layoutY="108.0" prefHeight="30.0" prefWidth="111.0" text="Phone" />
+                              <TextField fx:id="phone" layoutX="224.0" layoutY="111.0" />
+                              <Label layoutX="103.0" layoutY="147.0" prefHeight="30.0" prefWidth="111.0" text="Telefx" />
+                              <TextField fx:id="telefx" layoutX="224.0" layoutY="150.0" />
+                              <Label layoutX="103.0" layoutY="196.0" prefHeight="30.0" prefWidth="111.0" text="Address" />
+                              <TextField fx:id="address" layoutX="224.0" layoutY="199.0" />
+                              <Button layoutX="56.0" layoutY="311.0" mnemonicParsing="false" onAction="#save" prefHeight="45.0" prefWidth="338.0" text="Save">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/icons8-add-32.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Login">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="20.0" layoutY="40.0" prefHeight="32.0" prefWidth="124.0" text="User name:" />
+                              <TextField fx:id="username" layoutX="170.0" layoutY="44.0" />
+                              <Label layoutX="20.0" layoutY="90.0" prefHeight="32.0" prefWidth="134.0" text="New Password:" />
+                              <TextField fx:id="newPassword" layoutX="169.0" layoutY="94.0" />
+                              <Label layoutX="14.0" layoutY="131.0" prefHeight="32.0" prefWidth="152.0" text="Confirm Password" />
+                              <TextField fx:id="confirm" layoutX="169.0" layoutY="135.0" />
+                              <Button layoutX="12.0" layoutY="195.0" mnemonicParsing="false" onAction="#savePassword" prefHeight="33.0" prefWidth="271.0" text="Save">
+                                 <graphic>
+                                    <ImageView fitHeight="38.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/icons8-done-48.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <ImageView fitHeight="158.0" fitWidth="149.0" layoutX="353.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/login.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </root>
+      </Scene>
+   </scene>
+</Stage>
